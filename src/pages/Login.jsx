@@ -11,15 +11,15 @@ background:linear-gradient(
     rgba(255,255,255, 0.2)
 ),
  
- url("https://images.pexels.com/photos/796620/pexels-photo-796620.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") center;
-
+ url("https://images.pexels.com/photos/6913081/pexels-photo-6913081.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") center;
  background-size: cover;
+
 `
 
 
 const Wrapper =styled.div`
 padding: 20px;
-width: 40%;
+width: 25%;
 background-color: white;
 `
 
@@ -30,8 +30,7 @@ font-weight: 300;
 
 const Form =styled.form`
 display: flex;
-flex-wrap: wrap;
-
+flex-direction: column;
 
 `
 
@@ -40,15 +39,12 @@ flex-wrap: wrap;
 const Input =styled.input`
 flex: 1;
 min-width: 40%;
-margin: 20px 10px 0px 0px;
+margin: 10px 0px;
 padding: 10px;
 
 `
 
-const Agreement =styled.span`
-font-size: 12px;
-margin: 20px 0px;
-`
+
 
 const Button =styled.button`
 width: 40%;
@@ -57,32 +53,32 @@ padding: 15px 20px;
 background-color: teal;
 color: white;
 cursor: pointer;
+margin-bottom: 10px;
 `
+ const Link = styled.a`
+ margin: 5px 0px;
+ font-size: 12;
+ text-decoration: underline;
+ cursor: pointer;
+ 
+ `
 
-
-
-
-const Register = () => {
+const Login = () => {
     return (
         <Container>
             <Wrapper>
                 <Title>CREATE AN ACCOUNT</Title>
                 <Form>
-                    <Input placeholder ="name"/>
-                    <Input placeholder =" last name"/>
                     <Input placeholder ="username"/>
-                    <Input placeholder ="email"/>
-                    <Input placeholder ="password"/>
-                    <Input placeholder ="confirm password"/>
-                    <Agreement> 
-                        By creating an account, I consent to the processing of my person
-                        data in accorance with the <b>PRIVACY POLICY</b>
-                    </Agreement>
-                    <Button>CREATE</Button>
+                    <Input placeholder =" password"/>
+                    <Button>LOGIN</Button>
+                    <Link>FORGOT PASSWORD?</Link>
+                    <Link>CREATE A NEW ACCOUNT</Link>
+
                 </Form>
             </Wrapper>
         </Container>
     )
 }
 
-export default Register
+export default Login
